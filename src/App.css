@@ -14,23 +14,44 @@
   align-items: center;
 }
 
-.aboutItem {
+.flexItem {
   margin: 0 0.5rem;
 }
 
 .aboutWriting {
-  flex-basis: 40rem;
+  flex-basis: 30rem;
 }
 
 #Project {
-  padding-top: 4rem;
+  background: #D9822B;
+}
+
+.proj {
+  margin: 1.5rem 1rem 0 1rem;
+  padding: 1rem 0 0 0;
+}
+
+.Project {
+  padding-top: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.projItem {
+.projCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 25rem;
-  margin: 0 0.5rem;
+  height: 25rem;
+  /* background: #30404D; */
+}
+
+.projCardItem {
+  margin: 0.3rem 0;
+}
+
+.miniFlexItem {
+  margin: 0 0.2rem;
 }

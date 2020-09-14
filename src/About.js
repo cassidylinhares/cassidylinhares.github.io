@@ -4,12 +4,12 @@ import { Card, Elevation } from '@blueprintjs/core';
 function About() {
     return (
         <div id="About" >
-            <Card interactive elevation={Elevation.TWO} className="aboutItem" >
+            <Card interactive elevation={Elevation.TWO} className="flexItem" >
                 <img src="https://via.placeholder.com/240x240"  alt="It's Cassidy!"/>
                 <h4 className="bp3-heading">Cassidy Linhares</h4>
                 <h6 className="bp3-heading">Software Engineer</h6>  
             </Card>
-            <Card elevation={Elevation.TWO} className="aboutItem aboutWriting">
+            <Card elevation={Elevation.TWO} className="flexItem aboutWriting">
                     <p className="bp3-text-large">
                         Hello! I'm Cassidy, a Software Engineer in the making! 
                     </p>
