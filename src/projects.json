@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Weather Station",
+        "link": "https://github.com",
+        "description": "I recently started indoor gardening and it was important for me to know the humidity and temperature so I thought I would try building a weather monitoring system for my plants. It tells me the air temperature and the humidity in which ever room it is placed in. It logs whenever there is a change in temperature to the display and stores it in a local database. This was built using the BME280 sensors.",
+        "tags": ["Raspberry Pi", "Python", "MariaDB"]
+    },
+    {
+        "title": "Weather Station",
+        "link": "",
+        "description": "I recently started indoor gardening and it was important for me to know the humidity and temperature so I thought I would try building a weather monitoring system for my plants. It tells me the air temperature and the humidity in which ever room it is placed in. It logs whenever there is a change in temperature to the display and stores it in a local database. This was built using the BME280 sensors.",
+        "tags": ["Raspberry Pi", "Python", "MariaDB"]
+    }
+]
