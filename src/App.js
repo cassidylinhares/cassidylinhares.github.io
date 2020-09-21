@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from "./Header";
 import About from "./About";
-import Project from "./Projects"
+import Project from "./Projects";
+import Resume from "./Resume";
+import Contact from "./Contact";
 import "./App.css"
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
       <Header/>
       <About/>
       <Project/>
+      <Resume/>
+      <Contact/>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Card, Elevation } from '@blueprintjs/core';
-import Jobs from './projects.json';
+import Jobs from './resume.json';
 
 const mapJobs = (jobs) => {
     return jobs.map(job => (
-        <Card interactive elevation={Elevation.TWO} className="flexItem projCard" key={job.title}>
+        <Card interactive elevation={Elevation.TWO} className="flexItem jobCard" key={job.title}>
             <div>
                 <h4 className="bp3-heading">{job.title}</h4>
                 <div>
@@ -14,10 +14,20 @@ const mapJobs = (jobs) => {
             </div>
             <Card className="aboutItem aboutWriting">
                 <p className="bp3-text-large">Responsibilities</p>
-                <p>{job.description}</p>
+                {mapDescription(job.description)}
             </Card>
         </Card>
     ));
+}
+const mapDescription = (description) => {
+    let list = description.split("/").map(item => (
+        <li>{item}</li>
+    ));
+    return (
+        <ul className=".bp3-list">
+            {list}
+        </ul>
+    )
 }
 
 function Resume() {
