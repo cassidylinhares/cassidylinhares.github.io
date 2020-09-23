@@ -4,10 +4,11 @@
 
 .headers {
   margin: 0 0.5rem;
+  font-size: medium;
 }
 
 #About {
-  padding-top: 4rem;
+  padding: 4rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -23,18 +24,19 @@
 }
 
 #Project {
-  background: #D9822B;
-}
-
-.proj {
-  margin: 1.5rem 1rem 0 1rem;
-  padding: 1rem 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: cornflowerblue;
 }
 
 .Project {
-  padding-top: 1rem;
+  padding: 1rem 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -45,7 +47,7 @@
   align-items: flex-start;
   width: 25rem;
   height: 25rem;
-  /* background: #30404D; */
+  margin: 1rem 1rem 1rem 0;
 }
 
 .projCardItem {
@@ -56,6 +58,32 @@
   margin: 0 0.2rem;
 }
 
-.contact {
+#Resume {
+  background-color: darkslategray;
+}
+
+.alice-carousel__dots-item :active {
+  background-color: black;
+}
+.alice-carousel__next-btn-item .alice-carousel__prev-btn-item {
+  color: white;
+}
+
+.jobCard {
+  width: 40rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Contact {
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25rem;
 }

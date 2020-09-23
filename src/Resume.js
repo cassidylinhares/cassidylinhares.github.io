@@ -1,15 +1,18 @@
 import React from 'react';
 import { Card, Elevation } from '@blueprintjs/core';
+import AliceCarousel from 'react-alice-carousel'
 import Jobs from './resume.json';
+
 
 const mapJobs = (jobs) => {
     return jobs.map(job => (
+        <div>
         <Card interactive elevation={Elevation.TWO} className="flexItem jobCard" key={job.title}>
             <div>
-                <h4 className="bp3-heading">{job.title}</h4>
+                <h3 className="bp3-heading">{job.title}</h3>
                 <div>
-                    <h6 className="bp3-heading">{job.company}</h6>
-                    <h6 className="bp3-heading">{job.year}</h6>
+                    <h5 className="bp3-heading">{job.company}</h5>
+                    <h5 className="bp3-heading">{job.year}</h5>
                 </div>
             </div>
             <Card className="aboutItem aboutWriting">
@@ -17,6 +20,7 @@ const mapJobs = (jobs) => {
                 {mapDescription(job.description)}
             </Card>
         </Card>
+        </div>
     ));
 }
 const mapDescription = (description) => {
@@ -33,10 +37,11 @@ const mapDescription = (description) => {
 function Resume() {
     return (
         <div id="Resume">
-            <h3 className="bp3-heading">Resume</h3>
-            <div className="Resume" >
+            <div style={{fontSize:"6rem"}}>Experience.</div>
+            <AliceCarousel style={{color: "white"}}>
                 {mapJobs(Jobs)}
-            </div>
+            </AliceCarousel>
+            
         </div>
     );
 }

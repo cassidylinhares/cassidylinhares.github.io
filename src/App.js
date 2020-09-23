@@ -4,7 +4,8 @@ import About from "./About";
 import Project from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
-import "./App.css"
+import "react-alice-carousel/lib/alice-carousel.css";
+import "./App.css";
 
 function App() {
   return (

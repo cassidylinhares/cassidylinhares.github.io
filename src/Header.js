@@ -5,7 +5,7 @@ const headers = ["About", "Projects", "Resume", "Contact"];
 
 const mapHeader = (data) => {
     return data.map(item => (
-        <a href={"#"+{item}} className={"headers"}>{item}</a>
+        <a href={item} className={"headers"}>{item}</a>
     ));
 }
 
