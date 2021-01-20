@@ -5,7 +5,7 @@ function About() {
     return (
         <div id="About" >
             <Card interactive elevation={Elevation.TWO} className="flexItem" >
-                <img src="https://via.placeholder.com/240x240"  alt="It's Cassidy!"/>
+                <img src={"/bitmoji.png"}  alt="Me"/>
                 <h4 className="bp3-heading">Cassidy Linhares</h4>
                 <h6 className="bp3-heading">Software Engineer</h6>  
             </Card>

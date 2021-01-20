@@ -23,4 +23,11 @@
         "description": "My first version of my website portfolio. It didn't have much but it served its purpose.",
         "tags": ["HTML", "CSS", "Javascript"]
     }
+    ,
+    {
+        "title": "yourSpot - A Food Finder",
+        "link": "https://github.com/cassidylinhares/yourSpot",
+        "description": "A Web service that allowed users to find restaurants around them. It also allowed users to save and review restaurants they've been to. yourSpot offered many ways to find places around you whether it was by rating, location, price, or cravings.",
+        "tags": ["HTML", "Python", "CSS", "Flask", "MySQL"]
+    }
 ]

@@ -13,6 +13,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background: rgb(240, 228, 68);
 }
 
 .flexItem {
@@ -59,13 +60,13 @@
 }
 
 #Resume {
-  background-color: darkslategray;
+  background-color: rgba(63, 129, 129, 0.788);
 }
 
-.alice-carousel__dots-item :active {
-  background-color: black;
+.alice-carousel__dots-item.__active {
+  background-color: rgb(41, 73, 63);
 }
-.alice-carousel__next-btn-item .alice-carousel__prev-btn-item {
+.alice-carousel__next-btn-item, .alice-carousel__prev-btn-item {
   color: white;
 }
 
@@ -79,11 +80,18 @@
 }
 
 #Contact {
+  background-color: rgb(238, 168, 63);
   bottom: 0;
+  width: 100;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25rem;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.contactInner {
+  bottom: 0;
+  width: 15rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
 }
