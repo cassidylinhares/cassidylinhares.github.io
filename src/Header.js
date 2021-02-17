@@ -1,11 +1,11 @@
 import React from 'react';
 import { Navbar, Alignment } from "@blueprintjs/core";
 
-const headers = ["About", "Projects", "Resume", "Contact"];
+const headers = ["About", "Resume", "Projects", "Contact"];
 
 const mapHeader = (data) => {
     return data.map(item => (
-        <a href={item} className={"headers"}>{item}</a>
+        <a href={'#'+item} className={"headers"}>{item}</a>
     ));
 }
 

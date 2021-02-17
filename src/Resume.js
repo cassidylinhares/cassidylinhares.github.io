@@ -38,7 +38,7 @@ function Resume() {
     return (
         <div id="Resume">
             <div style={{fontSize:"6rem"}}>Experience.</div>
-            <AliceCarousel style={{color: "white"}}>
+            <AliceCarousel>
                 {mapJobs(Jobs)}
             </AliceCarousel>
             

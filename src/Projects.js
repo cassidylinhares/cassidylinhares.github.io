@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Elevation, AnchorButton, Tag } from '@blueprintjs/core';
+import AliceCarousel from 'react-alice-carousel';
 import Projects from './projects.json';
 
 const mapProjects = (projects) => {
@@ -26,11 +27,11 @@ const mapProjecTags = (tags) => {
 
 function Project() {
     return (
-        <div id="Project">
-            <div className="Project" >
+        <div id="Projects">
+            <div style={{fontSize:"8rem", textAlign:"right"}}>Projects.</div>
+            <AliceCarousel>
                 {mapProjects(Projects)}
-            </div>
-            <div style={{fontSize:"9rem"}}>Projects.</div>
+            </AliceCarousel>
         </div>
     );
 }
