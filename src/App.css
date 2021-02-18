@@ -2,82 +2,183 @@
 @import "~@blueprintjs/core/lib/css/blueprint.css";
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
-.headers {
-  margin: 0 0.5rem;
-  font-size: medium;
+
+@media only screen and (min-width: 300px){
+  .headers {
+    margin: 0 0.2rem;
+    font-size: small;
+  }
+
+  #About {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(240, 228, 68);
+  }
+
+  .flexItem {
+    margin: 0.5rem 1rem;
+  }
+  
+  .aboutWriting {
+    flex-basis: 10rem;
+  }
+
+  #Projects {
+    background: cornflowerblue;
+  }
+
+  .projects {
+    font-size: 4rem;
+    text-align: right;
+  }
+
+  .projCard {
+    width: 20rem;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projCardItem {
+    margin: 0.3rem 0;
+  }
+
+  .miniFlexItem {
+    margin: 0 0.2rem;
+  }
+
+  #Resume {
+    background-color: rgba(63, 129, 129, 0.788);
+  }
+
+  .resume {
+    font-size: 4rem;
+  }
+
+  .alice-carousel__dots-item.__active {
+    background-color: rgb(41, 73, 63);
+  }
+  .alice-carousel__next-btn-item, .alice-carousel__prev-btn-item {
+    color: white;
+  }
+
+  .jobCard {
+    width: 20rem;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #Contact {
+    background-color: rgb(238, 168, 63);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contactInner {
+    width: 15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
 }
 
-#About {
-  padding: 4rem 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: rgb(240, 228, 68);
-}
+@media only screen and (min-width: 1000px){
+  .headers {
+    margin: 0 0.5rem;
+    font-size: medium;
+  }
 
-.flexItem {
-  margin: 0 0.5rem;
-}
+  #About {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: rgb(240, 228, 68);
+  }
+  .flexItem {
+    margin: 0 0.5rem;
+  }
+  
+  .aboutWriting {
+    flex-basis: 30rem;
+  }
 
-.aboutWriting {
-  flex-basis: 30rem;
-}
+  #Projects {
+    background: cornflowerblue;
+  }
 
-#Projects {
-  background: cornflowerblue;
-}
+  .projects {
+    font-size: 8rem;
+    text-align: right;
+  }
 
-.projCard {
-  width: 40rem;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .projCard {
+    width: 40rem;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.projCardItem {
-  margin: 0.3rem 0;
-}
+  .projCardItem {
+    margin: 0.3rem 0;
+  }
 
-.miniFlexItem {
-  margin: 0 0.2rem;
-}
+  .miniFlexItem {
+    margin: 0 0.2rem;
+  }
 
-#Resume {
-  background-color: rgba(63, 129, 129, 0.788);
-}
+  #Resume {
+    background-color: rgba(63, 129, 129, 0.788);
+  }
 
-.alice-carousel__dots-item.__active {
-  background-color: rgb(41, 73, 63);
-}
-.alice-carousel__next-btn-item, .alice-carousel__prev-btn-item {
-  color: white;
-}
+  .resume {
+    font-size: 6rem;
+  }
 
-.jobCard {
-  width: 40rem;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .alice-carousel__dots-item.__active {
+    background-color: rgb(41, 73, 63);
+  }
+  .alice-carousel__next-btn-item, .alice-carousel__prev-btn-item {
+    color: white;
+  }
 
-#Contact {
-  background-color: rgb(238, 168, 63);
-  bottom: 0;
-  width: 100;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
+  .jobCard {
+    width: 40rem;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.contactInner {
-  bottom: 0;
-  width: 15rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
+  #Contact {
+    background-color: rgb(238, 168, 63);
+    bottom: 0;
+    width: 100;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .contactInner {
+    bottom: 0;
+    width: 15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
 }

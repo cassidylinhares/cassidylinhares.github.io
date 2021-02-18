@@ -37,7 +37,7 @@ const mapDescription = (description) => {
 function Resume() {
     return (
         <div id="Resume">
-            <div style={{fontSize:"6rem"}}>Experience.</div>
+            <div className="resume">Experience.</div>
             <AliceCarousel>
                 {mapJobs(Jobs)}
             </AliceCarousel>

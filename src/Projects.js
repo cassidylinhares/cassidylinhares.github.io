@@ -28,7 +28,7 @@ const mapProjecTags = (tags) => {
 function Project() {
     return (
         <div id="Projects">
-            <div style={{fontSize:"8rem", textAlign:"right"}}>Projects.</div>
+            <div className="projects">Projects.</div>
             <AliceCarousel>
                 {mapProjects(Projects)}
             </AliceCarousel>
