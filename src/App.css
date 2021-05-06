@@ -2,6 +2,7 @@
 @import "~@blueprintjs/core/lib/css/blueprint.css";
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
+
 .headers {
   margin: 0 0.5rem;
   font-size: medium;
@@ -41,7 +42,7 @@
   margin: 0.3rem 0;
 }
 
-.miniFlexItem {
+.tags {
   margin: 0 0.2rem;
 }
 
@@ -49,11 +50,11 @@
   background-color: rgba(63, 129, 129, 0.788);
 }
 
-.alice-carousel__dots-item.__active {
-  background-color: rgb(41, 73, 63);
+.alice-carousel__dots-item.__active  {
+  background-color: rgb(41, 73, 63) !important;
 }
 .alice-carousel__next-btn-item, .alice-carousel__prev-btn-item {
-  color: white;
+  color: white !important;
 }
 
 .jobCard {
@@ -80,4 +81,24 @@
   display: flex;
   justify-content: space-around;
   align-items: baseline;
+}
+
+#Sidebar {
+  position: fixed;
+  width:20rem;
+  left: 0;
+  margin: 2rem 1rem;
+}
+
+#Recipes {
+  position:fixed;
+  left: 22rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.recipeCard {
+  width: 25rem;
+  margin: 2rem 1rem;
 }

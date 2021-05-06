@@ -1,11 +1,14 @@
 import React from 'react';
-import Header from "./Header";
-import About from "./About";
-import Project from "./Projects";
-import Resume from "./Resume";
-import Contact from "./Contact";
-import "react-alice-carousel/lib/alice-carousel.css";
+import Header from "./profile/Header";
+import About from "./profile/About";
+import Project from "./profile/Projects";
+import Resume from "./profile/Resume";
+import Contact from "./profile/Contact";
+// import Sidebar from "./cooking/SideBar";
+// import RecipeCards from "./cooking/RecipeCards";
 import "./App.css";
+import "./common.css";
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 function App() {
   return (
@@ -15,6 +18,8 @@ function App() {
       <Resume/>
       <Project/>
       <Contact/>
+      {/* <Sidebar/>
+      <RecipeCards/> */}
     </div>
   );
 }
