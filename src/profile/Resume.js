@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Elevation } from '@blueprintjs/core';
-import AliceCarousel from 'react-alice-carousel';
+import { Carousel } from '../helper';
 import Jobs from './resume.json';
 
 const mapJobs = (jobs) => {
@@ -22,6 +22,7 @@ const mapJobs = (jobs) => {
         </div>
     ));
 }
+
 const mapDescription = (description) => {
     let list = description.split("/").map((item,i) => (
         <li key={i}>{item}</li>
@@ -36,10 +37,8 @@ const mapDescription = (description) => {
 function Resume() {
     return (
         <div id="Resume">
-            <div style={{fontSize:"6rem"}}>Experience.</div>
-            <AliceCarousel>
-                {mapJobs(Jobs)}
-            </AliceCarousel>
+            <div className="large-left">Experience.</div>
+            <Carousel items={mapJobs(Jobs)}/> 
         </div>
     );
 }

@@ -11,12 +11,12 @@ const mapHeader = (data) => {
 
 function Header() {
     return (
-        <Navbar fixedToTop>
+        <Navbar fixedToTop className="nav">
             <Navbar.Group >
                 <Navbar.Heading>Cassidy Linhares</Navbar.Heading> 
             </Navbar.Group>
            
-            <Navbar.Group align={Alignment.RIGHT}>
+            <Navbar.Group align={Alignment.RIGHT} className="nav">
                 {mapHeader(headers)}
             </Navbar.Group>
         </Navbar>

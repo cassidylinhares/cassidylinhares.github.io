@@ -2,6 +2,18 @@
 @import "~@blueprintjs/core/lib/css/blueprint.css";
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
+@media screen and (max-width: 730px) {
+  .nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+@media screen and (min-width: 1024px) {
+  
+}
 
 .headers {
   margin: 0 0.5rem;
@@ -27,6 +39,7 @@
 
 #Projects {
   background: cornflowerblue;
+  padding: 0 0 4rem 0;
 }
 
 .projCard {
@@ -48,13 +61,7 @@
 
 #Resume {
   background-color: rgba(63, 129, 129, 0.788);
-}
-
-.alice-carousel__dots-item.__active  {
-  background-color: rgb(41, 73, 63) !important;
-}
-.alice-carousel__next-btn-item, .alice-carousel__prev-btn-item {
-  color: white !important;
+  padding: 0 0 4rem 0;
 }
 
 .jobCard {
