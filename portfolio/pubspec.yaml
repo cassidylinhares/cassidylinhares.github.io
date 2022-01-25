@@ -33,6 +33,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_svg: ^1.0.3
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +59,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/companies/
+    - assets/bitmoji.svg
+    - assets/bitmoji_cir.svg
     - assets/bitmoji.png
     - assets/web-programming.png
 
@@ -77,9 +80,13 @@ flutter:
       fonts:
         - asset: assets/fonts/Nunito/Nunito-Regular.ttf
         - asset: assets/fonts/Nunito/Nunito-Light.ttf
+          weight: 300
         - asset: assets/fonts/Nunito/Nunito-Medium.ttf
+          weight: 500
         - asset: assets/fonts/Nunito/Nunito-SemiBold.ttf
+          weight: 600
         - asset: assets/fonts/Nunito/Nunito-Bold.ttf
+          weight: 700
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
