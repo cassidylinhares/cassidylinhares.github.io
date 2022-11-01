@@ -25,27 +25,25 @@ class Projects extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Flexible(
-                flex: 2,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black26,
-                        spreadRadius: 5,
-                        blurRadius: 6,
-                        offset: Offset(4, 5),
-                      )
-                    ],
-                  ),
+              Expanded(
+                child: SizedBox(
+                  // decoration: const BoxDecoration(
+                  //   boxShadow: [
+                  //     BoxShadow(
+                  //       color: Colors.black26,
+                  //       spreadRadius: 5,
+                  //       blurRadius: 6,
+                  //       offset: Offset(4, 5),
+                  //     )
+                  //   ],
+                  // ),
                   child: Image.asset(
                     'assets/projects/mad_libs.png',
                     width: 600,
                   ),
                 ),
               ),
-              Flexible(
-                flex: 1,
+              Expanded(
                 child: Column(
                   children: const [
                     Text(
