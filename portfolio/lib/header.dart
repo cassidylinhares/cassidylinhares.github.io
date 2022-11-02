@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utilities/constants.dart';
+import 'package:portfolio/utilities/strings.dart';
 
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class Header extends StatelessWidget {
                         SizedBox(
                           width: 800,
                           child: Text(
-                            "I'm a software engineer who specializes in full stack and IoT applications. Aside from coding, I tend to my indoor garden and cook!",
+                            headerText,
                             style: TextStyle(
                                 fontSize: 28, fontWeight: FontWeight.w500),
                             textAlign: TextAlign.left,
@@ -56,7 +57,7 @@ class Header extends StatelessWidget {
                   child: SizedBox(
                     width: 800,
                     child: Text(
-                      "I'm a software engineer who specializes in full stack and IoT applications. Aside from coding, I tend to my indoor garden and cook!",
+                      headerText,
                       style:
                           TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
                       textAlign: TextAlign.center,

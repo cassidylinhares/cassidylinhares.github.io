@@ -1,111 +1,130 @@
 import 'package:flutter/material.dart';
+import 'utilities/constants.dart';
+import 'utilities/strings.dart';
 
 class Projects extends StatelessWidget {
   const Projects({Key? key}) : super(key: key);
 
+  static const List<Map<String, String>> projects = [
+    {
+      'image': 'assets/projects/mad_libs.png',
+      'title': 'Mad Libs',
+      'desc': madLibsProjectText,
+    },
+    {
+      'image': 'assets/projects/plant_pal.png',
+      'title': 'Plant Pal',
+      'desc': iotProjectText,
+    },
+  ];
+
+  Widget _webView(int index) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Flex(
+        direction: Axis.horizontal,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Image.asset(
+                projects[index]['image'].toString(),
+                width: 500,
+              ),
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Flex(
+                direction: Axis.vertical,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    projects[index]['title'].toString(),
+                    style: const TextStyle(
+                        fontSize: 22, fontWeight: FontWeight.w700),
+                  ),
+                  Text(
+                    projects[index]['desc'].toString(),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.w300),
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget _mobileView(int index) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 15),
+      child: Flex(
+        direction: Axis.vertical,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 20, bottom: 10),
+            child: Text(
+              projects[index]['title'].toString(),
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+            ),
+          ),
+          Center(
+            child: Image.asset(
+              projects[index]['image'].toString(),
+              width: 300,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text(
+              projects[index]['desc'].toString(),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Column(
+    bool isScreenWide =
+        MediaQuery.of(context).size.width >= kMinWidthOfLargeScreen;
+
+    return Flex(
+      direction: Axis.vertical,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: const [
+          children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(128, 32, 0, 32),
-              child: Text(
+              padding: isScreenWide
+                  ? const EdgeInsets.fromLTRB(64, 32, 0, 24)
+                  : const EdgeInsets.fromLTRB(20, 32, 0, 16),
+              child: const Text(
                 "Things I've made",
                 textAlign: TextAlign.start,
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800),
               ),
             ),
           ],
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 32),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Expanded(
-                child: SizedBox(
-                  // decoration: const BoxDecoration(
-                  //   boxShadow: [
-                  //     BoxShadow(
-                  //       color: Colors.black26,
-                  //       spreadRadius: 5,
-                  //       blurRadius: 6,
-                  //       offset: Offset(4, 5),
-                  //     )
-                  //   ],
-                  // ),
-                  child: Image.asset(
-                    'assets/projects/mad_libs.png',
-                    width: 600,
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  children: const [
-                    Text(
-                      "Mad Libs",
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
-                    ),
-                    Text(
-                      "The mad libs game but on mobile! Created using React-native, players can pick from various stories or quotes and create new random, wacky, and funny stories. Players can read it aloud or have their phone read it back to them and even save it if they like it.\nAuthentication and storage are done with Google's Firebase.",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 32),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Flexible(
-                flex: 2,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black26,
-                        spreadRadius: 5,
-                        blurRadius: 6,
-                        offset: Offset(4, 5),
-                      )
-                    ],
-                  ),
-                  child: Image.asset(
-                    'assets/projects/plant_pal.png',
-                    width: 600,
-                  ),
-                ),
-              ),
-              Flexible(
-                flex: 1,
-                child: Column(
-                  children: const [
-                    Text(
-                      "Plant Pal",
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
-                    ),
-                    Text(
-                      "An IoT Smart water metering system for plants. Never forget to water your plants as the sensor reads from the plant each hour and then you get notified when the moisture drops below the recommended moisture level. You just sign in, to set the plant type and then stick the meter into the plant and leave it.\nDevice created using a NodeMCU & moisture sensor. Currently, only a web application made with React and Django exist.",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
+        ListView.builder(
+            shrinkWrap: true,
+            itemCount: projects.length,
+            itemBuilder: (context, index) {
+              if (isScreenWide) {
+                return _webView(index);
+              } else {
+                return _mobileView(index);
+              }
+            })
       ],
     );
   }
